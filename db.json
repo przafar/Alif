@@ -1,0 +1,92 @@
+{
+  "person": [
+    {
+      "name": "Mark Zuckerberg",
+      "department": "маркетинг",
+      "position": "Маркетинг",
+      "gender": "муж",
+      "date": "2000-08-15T19:00:00.000Z",
+      "id": 1
+    },
+    {
+      "name": "Bill Gates",
+      "department": "ит",
+      "position": "Junior Web Developer",
+      "gender": "муж",
+      "date": "1957-05-20T18:00:00.000Z",
+      "id": 2
+    },
+    {
+      "name": "Ilon Musk",
+      "department": "бухгалтерия",
+      "position": "Новичок",
+      "gender": "муж",
+      "date": "1982-06-14T17:00:00.000Z",
+      "id": 3
+    },
+    {
+      "name": "Davron Kabulov",
+      "department": "маркетинг",
+      "position": "Маркетинг",
+      "gender": "жен",
+      "date": "1976-05-10T18:00:00.000Z",
+      "id": 4
+    },
+    {
+      "name": "Mark Gates",
+      "department": "маркетинг",
+      "position": "Маркетинг",
+      "gender": "жен",
+      "date": "1997-05-20T19:00:00.000Z",
+      "id": 5
+    },
+    {
+      "name": "Eldar Gates test",
+      "department": "маркетинг",
+      "position": "Маркетинг",
+      "gender": "жен",
+      "date": "1996-05-16T19:00:00.000Z",
+      "id": 6
+    },
+    {
+      "name": "Eldar Gates",
+      "department": "бухгалтерия",
+      "position": "Маркетинг",
+      "gender": "жен",
+      "date": "1996-05-20T19:00:00.000Z",
+      "id": 7
+    },
+    {
+      "name": "Eldar Gates",
+      "department": "маркетинг",
+      "position": "Маркетинг",
+      "gender": "муж",
+      "date": "1996-05-16T19:00:00.000Z",
+      "id": 8
+    },
+    {
+      "name": "Eldar Gates",
+      "department": "бухгалтерия",
+      "position": "Маркетинг",
+      "gender": "жен",
+      "date": "1996-05-16T19:00:00.000Z",
+      "id": 9
+    },
+    {
+      "name": "Eldar Gates",
+      "department": "бухгалтерия",
+      "position": "Маркетинг",
+      "gender": "жен",
+      "date": "1996-05-21T19:00:00.000Z",
+      "id": 10
+    },
+    {
+      "name": "Полвонбоев Зафарбек Расулбекович",
+      "department": "маркетинг",
+      "position": "Junior Web Developer",
+      "gender": "муж",
+      "date": "2000-05-30T19:00:00.000Z",
+      "id": 12
+    }
+  ]
+}
