@@ -8,7 +8,6 @@ const URL = `http://localhost:3004/person`;
 
 export default new Vuex.Store({
   state: {
-    person: [],
     member: []
   },
   mutations: {
@@ -19,8 +18,8 @@ export default new Vuex.Store({
   actions: {
     async loadData() {
       try {
-        const { data } = await axios.get(URL) 
-        return data
+        const info = await axios.get(URL)
+        return info.data
       } catch (e) {
         throw e
       }
@@ -50,6 +49,22 @@ export default new Vuex.Store({
         throw e
       } 
     },
+    async createData({commit}, {name, department, position, gender, date, id}) {
+      const info = {
+        name: name,
+        department: department,
+        position: position,
+        gender: gender,
+        date: date,
+        id
+      }
+      try {        
+        const { data } = await axios.post(URL, info)
+        return data
+      } catch (e) {
+        throw e
+      } 
+    },
     async deleteData({commit}, id) {
       try {
         const { data } = await axios.delete(URL + '/' + id)
@@ -61,9 +76,6 @@ export default new Vuex.Store({
 
   },
   getters: {
-    PERSON: state => {
-      return state.person
-    },
     MEMBER: state => {
       return state.member
     }

@@ -72,7 +72,7 @@ export default {
         let month = Number(key.substr(5, 2)) - 1;
         let day = Number(key.substr(8, 2));
         let today = new Date();
-        var age = today.getFullYear() - year;
+        let age = today.getFullYear() - year;
         if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) {
           age--;
         }

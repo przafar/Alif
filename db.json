@@ -13,7 +13,7 @@
       "department": "ит",
       "position": "Junior Web Developer",
       "gender": "муж",
-      "date": "1957-05-20T18:00:00.000Z",
+      "date": "1988-08-17T17:00:00.000Z",
       "id": 2
     },
     {
@@ -28,7 +28,7 @@
       "name": "Davron Kabulov",
       "department": "маркетинг",
       "position": "Маркетинг",
-      "gender": "жен",
+      "gender": "муж",
       "date": "1976-05-10T18:00:00.000Z",
       "id": 4
     },
@@ -42,19 +42,11 @@
     },
     {
       "name": "Eldar Gates test",
-      "department": "маркетинг",
+      "department": "ит",
       "position": "Маркетинг",
       "gender": "жен",
       "date": "1996-05-16T19:00:00.000Z",
       "id": 6
-    },
-    {
-      "name": "Eldar Gates",
-      "department": "бухгалтерия",
-      "position": "Маркетинг",
-      "gender": "жен",
-      "date": "1996-05-20T19:00:00.000Z",
-      "id": 7
     },
     {
       "name": "Eldar Gates",
@@ -65,28 +57,36 @@
       "id": 8
     },
     {
-      "name": "Eldar Gates",
-      "department": "бухгалтерия",
-      "position": "Маркетинг",
-      "gender": "жен",
-      "date": "1996-05-16T19:00:00.000Z",
-      "id": 9
-    },
-    {
-      "name": "Eldar Gates",
-      "department": "бухгалтерия",
-      "position": "Маркетинг",
-      "gender": "жен",
-      "date": "1996-05-21T19:00:00.000Z",
-      "id": 10
-    },
-    {
       "name": "Полвонбоев Зафарбек Расулбекович",
       "department": "маркетинг",
       "position": "Junior Web Developer",
       "gender": "муж",
       "date": "2000-05-30T19:00:00.000Z",
       "id": 12
+    },
+    {
+      "name": "Madaminova Guli",
+      "department": "бухгалтерия",
+      "position": "ИТ",
+      "gender": "жен",
+      "date": "1973-12-12T15:32:00.000Z",
+      "id": 14
+    },
+    {
+      "name": "Madaminova Asal",
+      "department": "маркетинг",
+      "position": "Маркетинг",
+      "gender": "жен",
+      "date": "2000-06-28T02:45:00.000Z",
+      "id": 15
+    },
+    {
+      "name": "Tom Holland",
+      "department": "ит",
+      "position": "Маркетинг",
+      "gender": "муж",
+      "date": "1999-09-14T02:48:00.000Z",
+      "id": 16
     }
   ]
 }

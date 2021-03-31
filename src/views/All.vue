@@ -6,6 +6,9 @@
         <router-link to="/" class="mx-3">
           <a class="font-weight-bold text-secondary" href="">Главная</a>
         </router-link>
+        <router-link to="/create" class="mx-3">
+          <a class="font-weight-bold text-secondary" href="">Добавить сотрудника</a>
+        </router-link>
       </div>
       <div class="px-4 mt-4">
         <div class="table-wrapper">
@@ -22,7 +25,7 @@
                   <a class="dropdown-toggle mr-4" type="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">Отдел</a>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item text-uppercase" @click="onChange(dep)" href="#" v-for="dep in deparments" :key="dep.id">{{ dep }}</a>
+                    <a class="dropdown-item text-uppercase" @click="onChange(dep)" v-for="dep in deparments" :key="dep.id">{{ dep }}</a>
                   </div>
                 </th>
                 <th class="th-lg">
@@ -30,9 +33,11 @@
                   </a>
                 </th>
                 <th class="th-lg">
-                  <a href="">Пол
-                    <i class="fas fa-sort ml-1"></i>
-                  </a>
+                  <a class="dropdown-toggle mr-4" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Пол</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item text-uppercase" @click="filterGender(gen)" v-for="gen in gender" :key="gen.id">{{ gen }}</a>
+                  </div>
                 </th>
                 <th class="th-lg">
                   <a href="">Дата рождения
@@ -74,30 +79,25 @@
 <script>
 import paginationMixin from '../mixins/pagination.mixin'
 export default {
-  name: 'All',
   mixins: [paginationMixin],
   data: () => ({
     person: [],
     deparments: ['ит', 'бухгалтерия', 'маркетинг'],
+    gender: ['муж', 'жен']
   }),
   computed: {
   
   },
   methods: {
-    
+
   },
   async mounted () {
     this.person = await this.$store.dispatch('loadData')
     this.setupPagination(this.person.map(person => {
       return {
-        ...person
+        ...person,
       }
     }))
-
-    
-
   }
-  
-
 }
 </script>

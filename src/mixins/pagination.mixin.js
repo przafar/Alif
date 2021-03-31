@@ -8,10 +8,8 @@ export default {
       pageCount: 0,
       allItems: [],
       items: [],
+      allItemsForFilter: []
     }
-  },
-  computed: {
-    
   },
   methods: {
     pageChangeHandler(page) {
@@ -22,9 +20,13 @@ export default {
       this.allItems = _.chunk(allItems, this.pageSize)
       this.pageCount = _.size(this.allItems)
       this.items = this.allItems[this.page - 1] || this.allItems[0]
+      this.allItemsForFilter = allItems
     },
     onChange(event) {
-      this.items = _.filter(this.allItems, event);
+      this.items = _.filter(this.allItemsForFilter, {department: event});
+    },
+    filterGender(event) {
+      this.items = _.filter(this.allItemsForFilter, {gender: event});
     }
   },
 }

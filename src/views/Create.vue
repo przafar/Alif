@@ -33,33 +33,9 @@
       <h5 class="mt-4">Дата рождения</h5>
       <vuejs-datepicker class="mt-3" format="dd/MM/yyyy" v-model="date"></vuejs-datepicker>
       <div class="d-inline-block mt-5">
-        <button type="submit" class="btn btn-info px-4">Обновить</button>
-        
-        <button type="button" class="btn btn-danger ml-4" data-toggle="modal" data-target="#exampleModal">
-          <i class="fas fa-trash"></i>
-        </button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Удалить {{ name }}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                Вы действительно хотите удалить?
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Выйти</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal" @click="deleteHandler">Удалить</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <button type="submit" class="btn btn-info px-4">Создать</button>
       </div>
     </form>
-    
   </div>
 </template>
 <script>
@@ -84,28 +60,18 @@ export default {
         position: this.position,
         gender: this.gender,
         date: this.date,
-        id: this.$route.params.id
+
       }
-      await this.$store.dispatch('updateData', info)
+      await this.$store.dispatch('createData', info)
       this.$router.go(-1)
 
     },
     onChange(event) {
       this.deparment = event.target.value
     },
-    async deleteHandler() {
-      await this.$store.dispatch('deleteData', this.$route.params.id)
-      this.$router.go(-1)
-    },
   },
   async mounted() {
-    const id = this.$route.params.id
-    this.member = await this.$store.dispatch('loadDataById', id)
-    this.name = this.member.name
-    this.department = this.member.department
-    this.position = this.member.position
-    this.date = this.member.date,
-    this.gender = this.member.gender
+    
   },
   components: {
     vuejsDatepicker
